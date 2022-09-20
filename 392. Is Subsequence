@@ -1,0 +1,19 @@
+///392. Is Subsequence
+
+
+class Solution {
+public:
+    bool isSubsequence(string s, string t) {
+    long long len1 = s.size();
+    long long len2 = t.size();
+   long long j = 0,i;
+    for(i=0; i<len2; i++){
+        if(j>=len1) break;
+        if(s[j]==t[i]){
+            j++;
+        }
+    }
+    if(j==len1) return true;
+    else return false;
+    }
+};
